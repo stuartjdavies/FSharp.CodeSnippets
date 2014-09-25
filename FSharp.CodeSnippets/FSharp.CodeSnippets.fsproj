@@ -104,11 +104,9 @@
     <None Include="UnemploymentTrends.fsx" />
     <None Include="Deficit.fsx" />
     <None Include="Debt.fsx" />
-    <None Include="GraphEmissions.fsx" />
-    <None Include="BankTrans.fsx" />
+    <None Include="MyBankTrans.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="NGERS-2009-10.xlsx" />
     <None Include="testtrans.csv" />
   </ItemGroup>
   <PropertyGroup>
