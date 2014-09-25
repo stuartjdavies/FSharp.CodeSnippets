@@ -1198,11 +1198,6 @@
  Saves CSV to a string
 </summary>
 </member>
-<member name="M:FSharp.Data.Runtime.CsvFile`1.Save(System.String,Microsoft.FSharp.Core.FSharpOption{System.Char},Microsoft.FSharp.Core.FSharpOption{System.Char})">
-<summary>
- Saves CSV to the specified file
-</summary>
-</member>
 <member name="M:FSharp.Data.Runtime.CsvFile`1.Save(System.IO.Stream,Microsoft.FSharp.Core.FSharpOption{System.Char},Microsoft.FSharp.Core.FSharpOption{System.Char})">
 <summary>
  Saves CSV to the specified stream
@@ -1686,15 +1681,8 @@
  Represents a cache (various implementations are available)
 </summary>
 </member>
-<member name="M:FSharp.Data.Runtime.Caching.createInternetFileCache(System.String,System.TimeSpan)">
-<summary>
- Creates a cache that stores data in a local file system
-</summary>
-</member>
-<member name="M:FSharp.Data.Runtime.Caching.hashString(System.String)">
-<summary>
- Get hash code of a string - used to determine cache file
-</summary>
+<member name="">
+
 </member>
 <member name="M:FSharp.Data.Runtime.Caching.createInMemoryCache``1(System.TimeSpan)">
 <summary>
@@ -2190,46 +2178,10 @@
 <member name="">
 
 </member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
 <member name="M:FSharp.Data.Runtime.Freebase.FreebaseObject.GetImages">
 <summary>
  Images associated with this item. 
 </summary>
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
 </member>
 <member name="">
 
@@ -3228,30 +3180,6 @@
 <member name="">
 
 </member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
 <member name="M:FSharp.Data.Runtime.IO.UriResolver.Resolve(System.Uri)">
 <summary>
  Resolve the absolute location of a file (or web URL) according to the rules
@@ -3310,24 +3238,6 @@
  It the uri is a file, uses shared read, so it works when the file locked by Excel or similar tools,
  and sets up a filesystem watcher that calls the invalidate function whenever the file changes
 </summary>
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
 </member>
 <member name="">
 
@@ -3781,36 +3691,6 @@
 <summary>
  A property of a record has a name and type and may be optional
 </summary>
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
 </member>
 <member name="">
 
@@ -4430,6 +4310,12 @@
 
 </member>
 <member name="T:System.AssemblyVersionInformation">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
 
 </member>
 </members>

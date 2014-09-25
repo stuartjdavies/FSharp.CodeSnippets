@@ -33,12 +33,36 @@
     <DocumentationFile>bin\Release\FSharp.CodeSnippets.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Deedle">
+      <HintPath>..\packages\Deedle.1.0.1\lib\net40\Deedle.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Deedle.RProvider.Plugin">
+      <HintPath>..\packages\Deedle.RPlugin.1.0.1\lib\net40\Deedle.RProvider.Plugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Foogle.Charts">
+      <HintPath>..\packages\Foogle.Charts.0.0.2\lib\net40\Foogle.Charts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.Charting">
+      <HintPath>..\packages\FSharp.Charting.0.90.6\lib\net40\FSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FSharp.Core">
-      <HintPath>..\packages\RProvider.1.0.17\lib\net40\FSharp.Core.dll</HintPath>
+      <HintPath>..\packages\RProvider.1.0.13\lib\net40\FSharp.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Data">
-      <HintPath>..\packages\FSharp.Data.2.0.15\lib\net40\FSharp.Data.dll</HintPath>
+      <HintPath>..\packages\FSharp.Data.2.0.9\lib\net40\FSharp.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.0.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MathNet.Numerics.FSharp">
+      <HintPath>..\packages\MathNet.Numerics.FSharp.3.0.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -55,19 +79,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="RProvider">
-      <HintPath>..\packages\RProvider.1.0.17\lib\net40\RProvider.dll</HintPath>
+      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RProvider.DesignTime">
-      <HintPath>..\packages\RProvider.1.0.17\lib\net40\RProvider.DesignTime.dll</HintPath>
+      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.DesignTime.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RProvider.Runtime">
-      <HintPath>..\packages\RProvider.1.0.17\lib\net40\RProvider.Runtime.dll</HintPath>
+      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RProvider.Server">
-      <HintPath>..\packages\RProvider.1.0.17\lib\net40\RProvider.Server.exe</HintPath>
+      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.Server.exe</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -76,10 +100,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BankTrans.fsx" />
     <None Include="WriteExcelFile.fsx" />
     <None Include="UnemploymentTrends.fsx" />
+    <None Include="Deficit.fsx" />
+    <None Include="Debt.fsx" />
+    <None Include="GraphEmissions.fsx" />
+    <None Include="BankTrans.fsx" />
+    <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="NGERS-2009-10.xlsx" />
+    <None Include="testtrans.csv" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
