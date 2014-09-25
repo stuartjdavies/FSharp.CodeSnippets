@@ -1,8 +1,4 @@
-﻿#r @"..\packages\R.NET.Community.1.5.15\lib\net40\RDotNet.dll"
-#r @"..\packages\R.NET.Community.FSharp.0.1.8\lib\net40\RDotNet.FSharp.dll"
-#r @"..\packages\RProvider.1.0.13\lib\net40\RProvider.dll"
-#r @"..\packages\RProvider.1.0.13\lib\net40\RProvider.Runtime.dll"
-#r @"..\packages\FSharp.Data.2.0.9\lib\net40\FSharp.Data.dll"
+﻿#load "../packages/FsLab.0.0.19/FsLab.fsx"
  
 open System
 open RDotNet
