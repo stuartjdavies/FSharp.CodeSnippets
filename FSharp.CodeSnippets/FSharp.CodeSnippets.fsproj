@@ -106,6 +106,7 @@
     <None Include="Debt.fsx" />
     <None Include="UnitsOfMeasure.fsx" />
     <None Include="AusPopulationClock.fsx" />
+    <None Include="ActivePatternExample.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
