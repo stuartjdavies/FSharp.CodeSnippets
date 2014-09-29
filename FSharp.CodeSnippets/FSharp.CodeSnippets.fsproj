@@ -57,6 +57,7 @@
     <None Include="AusPopulationClock.fsx" />
     <None Include="ActivePatternExample.fsx" />
     <None Include="InfluencedByCategoryTheory.fsx" />
+    <None Include="CurryingAndPartApp.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
