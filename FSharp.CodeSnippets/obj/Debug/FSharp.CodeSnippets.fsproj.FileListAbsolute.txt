@@ -37,4 +37,5 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Deb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\FSharp.Charting.xml
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\MathNet.Numerics.xml
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\MathNet.Numerics.FSharp.xml
-C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\obj\Debug\FSharp.CodeSnippets.fsprojResolveAssemblyReference.cache
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\FSharp.Data.TypeProviders.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\FSharp.Core.xml
