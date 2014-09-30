@@ -1,6 +1,5 @@
 ﻿#load "../packages/FsLab.0.0.19/FsLab.fsx"
 
-// Modification of F# Data: CSV Type Provider
 open FSharp.Data
 open FSharp.Charting
 
@@ -12,10 +11,6 @@ let westpackStocks = Stocks.Load("http://ichart.finance.yahoo.com/table.csv?s=WB
 let firstRow = westpackStocks.Rows |> Seq.head
 let lastDate = firstRow.Date
 let lastOpen = firstRow.Open
-
-// Print the prices in the HLOC format
-for row in westpackStocks.Rows do
-  printfn "HLOC: (%A, %A, %A, %A)" row.High row.Low row.Open row.Close
 
 // Visualize the stock prices
 [ for row in westpackStocks.Rows -> row.Date, row.Open ]
