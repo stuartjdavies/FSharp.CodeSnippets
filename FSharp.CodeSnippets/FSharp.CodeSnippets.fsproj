@@ -60,6 +60,8 @@
     <None Include="ActivePatternExample.fsx" />
     <None Include="InfluencedByCategoryTheory.fsx" />
     <None Include="ParallelGraphBankStockPrices.fsx" />
+    <None Include="OOConceptsWithMonopoly.fsx" />
+    <None Include="CoreFPConcepts.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
