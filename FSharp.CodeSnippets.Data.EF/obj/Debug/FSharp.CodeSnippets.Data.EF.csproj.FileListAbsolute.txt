@@ -7,3 +7,4 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\obj\Debug\FSharp.CodeSnippets.Data.EF.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\obj\Debug\FSharp.CodeSnippets.Data.EF.pdb
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\obj\Debug\FSharp.CodeSnippets.Data.EF.csprojResolveAssemblyReference.cache
