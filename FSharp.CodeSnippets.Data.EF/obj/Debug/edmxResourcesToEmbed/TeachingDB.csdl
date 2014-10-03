@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeachingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_GroupsStudents" FromRole="Groups" ToRole="Students" />
+    <NavigationProperty Name="Subj_Teach" Relationship="Self.FK_GroupsSubj_Teach" FromRole="Groups" ToRole="Subj_Teach" />
+  </EntityType>
+  <EntityType Name="Mark">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StudentMarks" Type="Int32" Nullable="false" />
+    <Property Name="Student_Id" Type="Int32" Nullable="false" />
+    <Property Name="Subject_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_StudentMark" FromRole="Marks" ToRole="Students" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_SubjectMark" FromRole="Marks" ToRole="Subjects" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Group_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_GroupsStudents" FromRole="Students" ToRole="Groups" />
+    <NavigationProperty Name="Marks" Relationship="Self.FK_StudentMark" FromRole="Students" ToRole="Marks" />
+  </EntityType>
+  <EntityType Name="Subj_Teach">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Teacher_Id" Type="Int32" Nullable="false" />
+    <Property Name="Subject_Id" Type="Int32" Nullable="false" />
+    <Property Name="Group_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_GroupsSubj_Teach" FromRole="Subj_Teach" ToRole="Groups" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_SubjectsSubj_Teach" FromRole="Subj_Teach" ToRole="Subjects" />
+    <NavigationProperty Name="Teacher" Relationship="Self.FK_TeachersSubj_Teach" FromRole="Subj_Teach" ToRole="Teachers" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Marks" Relationship="Self.FK_SubjectMark" FromRole="Subjects" ToRole="Marks" />
+    <NavigationProperty Name="Subj_Teach" Relationship="Self.FK_SubjectsSubj_Teach" FromRole="Subjects" ToRole="Subj_Teach" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Subj_Teach" Relationship="Self.FK_TeachersSubj_Teach" FromRole="Teachers" ToRole="Subj_Teach" />
+  </EntityType>
+  <Association Name="FK_GroupsStudents">
+    <End Role="Groups" Type="Self.Group" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Group_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupsSubj_Teach">
+    <End Role="Groups" Type="Self.Group" Multiplicity="1" />
+    <End Role="Subj_Teach" Type="Self.Subj_Teach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subj_Teach">
+        <PropertyRef Name="Group_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentMark">
+    <End Role="Students" Type="Self.Student" Multiplicity="1" />
+    <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Marks">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubjectMark">
+    <End Role="Subjects" Type="Self.Subject" Multiplicity="1" />
+    <End Role="Marks" Type="Self.Mark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Marks">
+        <PropertyRef Name="Subject_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubjectsSubj_Teach">
+    <End Role="Subjects" Type="Self.Subject" Multiplicity="1" />
+    <End Role="Subj_Teach" Type="Self.Subj_Teach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subj_Teach">
+        <PropertyRef Name="Subject_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeachersSubj_Teach">
+    <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="Subj_Teach" Type="Self.Subj_Teach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teachers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Subj_Teach">
+        <PropertyRef Name="Teacher_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TeachingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Groups" EntityType="Self.Group" />
+    <EntitySet Name="Marks" EntityType="Self.Mark" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Subj_Teach" EntityType="Self.Subj_Teach" />
+    <EntitySet Name="Subjects" EntityType="Self.Subject" />
+    <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+    <AssociationSet Name="FK_GroupsStudents" Association="Self.FK_GroupsStudents">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupsSubj_Teach" Association="Self.FK_GroupsSubj_Teach">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Subj_Teach" EntitySet="Subj_Teach" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentMark" Association="Self.FK_StudentMark">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Marks" EntitySet="Marks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubjectMark" Association="Self.FK_SubjectMark">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Marks" EntitySet="Marks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubjectsSubj_Teach" Association="Self.FK_SubjectsSubj_Teach">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Subj_Teach" EntitySet="Subj_Teach" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeachersSubj_Teach" Association="Self.FK_TeachersSubj_Teach">
+      <End Role="Teachers" EntitySet="Teachers" />
+      <End Role="Subj_Teach" EntitySet="Subj_Teach" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

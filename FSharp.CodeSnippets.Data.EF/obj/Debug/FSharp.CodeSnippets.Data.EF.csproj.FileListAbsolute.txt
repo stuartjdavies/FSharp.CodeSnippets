@@ -1,0 +1,9 @@
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\FSharp.CodeSnippets.Data.EF.dll.config
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\FSharp.CodeSnippets.Data.EF.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\FSharp.CodeSnippets.Data.EF.pdb
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\EntityFramework.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\EntityFramework.xml
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\obj\Debug\FSharp.CodeSnippets.Data.EF.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data.EF\obj\Debug\FSharp.CodeSnippets.Data.EF.pdb
