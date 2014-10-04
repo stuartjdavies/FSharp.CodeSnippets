@@ -49,16 +49,17 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <None Include="WriteExcelFile.fsx" />
     <None Include="UnemploymentTrends.fsx" />
     <None Include="Deficit.fsx" />
     <None Include="Debt.fsx" />
     <None Include="WestpackStockPriceChanges.fsx" />
+    <None Include="EnergyEmissions.fsx" />
     <None Include="UnitsOfMeasure.fsx" />
     <None Include="AusPopulationClock.fsx" />
+    <None Include="ParallelGraphBankStockPrices.fsx" />
     <None Include="GlobalWeatherSOAPService.fsx" />
     <None Include="ActivePatternExample.fsx" />
-    <None Include="ParallelGraphBankStockPrices.fsx" />
+    <None Include="WriteExcelFile.fsx" />
     <None Include="OOConceptsWithMonopoly.fsx" />
     <None Include="CoreFPConcepts.fsx" />
     <None Include="TeachingDB_EntityFramework.fsx" />
@@ -73,6 +74,14 @@
     </Reference>
     <Reference Include="Deedle.RProvider.Plugin">
       <HintPath>..\packages\Deedle.RPlugin.1.0.1\lib\net40\Deedle.RProvider.Plugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelProvider">
+      <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ExcelProvider.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Foogle.Charts">
@@ -92,6 +101,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Data.TypeProviders, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MathNet.Numerics">
       <HintPath>..\packages\MathNet.Numerics.3.0.0\lib\net40\MathNet.Numerics.dll</HintPath>
       <Private>True</Private>

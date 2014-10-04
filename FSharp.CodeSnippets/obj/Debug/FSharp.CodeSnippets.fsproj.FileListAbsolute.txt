@@ -39,3 +39,9 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Deb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\MathNet.Numerics.FSharp.xml
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\FSharp.Data.TypeProviders.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\FSharp.Core.xml
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\Excel.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\ExcelProvider.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\Excel.pdb
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\ExcelProvider.pdb
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\ExcelProvider.xml

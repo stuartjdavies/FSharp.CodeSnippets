@@ -1,4 +1,6 @@
-﻿// Reference the Excel interop assembly
+﻿// This is from Real World F#
+
+// Reference the Excel interop assembly
 #r "Microsoft.Office.Interop.Excel.dll"
 open Microsoft.Office.Interop.Excel
 open System

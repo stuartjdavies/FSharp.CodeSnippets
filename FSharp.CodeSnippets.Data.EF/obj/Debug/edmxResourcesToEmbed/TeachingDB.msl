@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="TeachingDBModelStoreContainer" CdmEntityContainer="TeachingDBEntities">
     <EntitySetMapping Name="Groups">
-      <EntityTypeMapping TypeName="TeachingDBModel.Group">
+      <EntityTypeMapping TypeName="IsTypeOf(TeachingDBModel.Group)">
         <MappingFragment StoreEntitySet="Groups">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -10,7 +10,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Marks">
-      <EntityTypeMapping TypeName="TeachingDBModel.Mark">
+      <EntityTypeMapping TypeName="IsTypeOf(TeachingDBModel.Mark)">
         <MappingFragment StoreEntitySet="Marks">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Date" ColumnName="Date" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Students">
-      <EntityTypeMapping TypeName="TeachingDBModel.Student">
+      <EntityTypeMapping TypeName="IsTypeOf(TeachingDBModel.Student)">
         <MappingFragment StoreEntitySet="Students">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -31,7 +31,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Subj_Teach">
-      <EntityTypeMapping TypeName="TeachingDBModel.Subj_Teach">
+      <EntityTypeMapping TypeName="IsTypeOf(TeachingDBModel.Subj_Teach)">
         <MappingFragment StoreEntitySet="Subj_Teach">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Teacher_Id" ColumnName="Teacher_Id" />
@@ -41,7 +41,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Subjects">
-      <EntityTypeMapping TypeName="TeachingDBModel.Subject">
+      <EntityTypeMapping TypeName="IsTypeOf(TeachingDBModel.Subject)">
         <MappingFragment StoreEntitySet="Subjects">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
@@ -49,7 +49,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Teachers">
-      <EntityTypeMapping TypeName="TeachingDBModel.Teacher">
+      <EntityTypeMapping TypeName="IsTypeOf(TeachingDBModel.Teacher)">
         <MappingFragment StoreEntitySet="Teachers">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
