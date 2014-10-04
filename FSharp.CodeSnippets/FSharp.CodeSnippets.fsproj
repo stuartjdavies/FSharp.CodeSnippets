@@ -62,8 +62,9 @@
     <None Include="WriteExcelFile.fsx" />
     <None Include="OOConceptsWithMonopoly.fsx" />
     <None Include="CoreFPConcepts.fsx" />
-    <None Include="TeachingDB_EntityFramework.fsx" />
+    <None Include="TeachingDB_EFTypeProvider.fsx" />
     <None Include="TeachingDB_SqlTypeProvider.fsx" />
+    <None Include="TeachingDB_SqlEntityTypeProvider.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
