@@ -66,6 +66,7 @@
     <None Include="TeachingDB_EFTypeProvider.fsx" />
     <None Include="TeachingDB_SqlTypeProvider.fsx" />
     <None Include="TeachingDB_SqlEntityTypeProvider.fsx" />
+    <None Include="ItalianMinistryOfHealth_odata.fsx" />
     <None Include="GlobalMap.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
@@ -147,6 +148,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
