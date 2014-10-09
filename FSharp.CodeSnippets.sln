@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C5F60
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.DataScience", "FSharp.CodeSnippets.DataScience\FSharp.CodeSnippets.DataScience.fsproj", "{8EECEE8B-0974-4F7C-A3A1-5523376DF133}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
