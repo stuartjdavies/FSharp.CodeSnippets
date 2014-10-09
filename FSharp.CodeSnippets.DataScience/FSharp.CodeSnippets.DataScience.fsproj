@@ -117,12 +117,12 @@
     <None Include="Deficit.fsx" />
     <None Include="Debt.fsx" />
     <None Include="WestpackStockPriceChanges.fsx" />
-    <None Include="RetailTurnoverByIndustry.fsx" />
-    <None Include="GreenHouseGasEmissions.fsx" />
+    <None Include="AusRetailTurnoverByIndustry.fsx" />
+    <None Include="AusGreenHouseGasEmissions.fsx" />
     <None Include="AusPopulationClock.fsx" />
-    <None Include="ParallelGraphBankStockPrices.fsx" />
+    <None Include="AusBankStockPrices.fsx" />
     <None Include="GlobalWeatherSOAPService.fsx" />
-    <None Include="AustralianBeerConsumption.fsx" />
+    <None Include="AusAlcoholConsumption.fsx" />
     <None Include="ItalianMinistryOfHealth_odata.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />

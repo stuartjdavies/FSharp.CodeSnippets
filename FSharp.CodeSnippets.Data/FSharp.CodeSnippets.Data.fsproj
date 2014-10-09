@@ -44,6 +44,7 @@
   <ItemGroup>
     <None Include="NGERS-2009-10.xlsx" />
     <None Include="850101.xls" />
+    <None Include="AusBeerConsuption.xls" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
