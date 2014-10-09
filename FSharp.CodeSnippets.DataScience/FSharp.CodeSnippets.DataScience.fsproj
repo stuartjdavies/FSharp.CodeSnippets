@@ -112,7 +112,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GlobalMap.fsx" />
+    <None Include="WorldPoplutationGrowth.fsx" />
     <None Include="UnemploymentTrends.fsx" />
     <None Include="Deficit.fsx" />
     <None Include="Debt.fsx" />
