@@ -45,6 +45,8 @@
     <None Include="NGERS-2009-10.xlsx" />
     <None Include="850101.xls" />
     <None Include="AusBeerConsuption.xls" />
+    <None Include="SEEK_AU_EI_Data_Sep2014.xls" />
+    <None Include="historical-migration-stats.xls" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

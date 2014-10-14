@@ -122,8 +122,10 @@
     <None Include="AusPopulationClock.fsx" />
     <None Include="AusBankStockPrices.fsx" />
     <None Include="GlobalWeatherSOAPService.fsx" />
+    <None Include="AusMigration.fsx" />
     <None Include="AusAlcoholConsumption.fsx" />
     <None Include="ItalianMinistryOfHealth_odata.fsx" />
+    <None Include="SeekJobAds.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
   </ItemGroup>
