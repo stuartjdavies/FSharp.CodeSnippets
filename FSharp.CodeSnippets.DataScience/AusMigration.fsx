@@ -68,9 +68,10 @@ type MigrationProgramByOutcomeSchema = ExcelFile<"C:\Users\stuart\Documents\GitH
 
 let mg = new MigrationProgramByOutcomeSchema(historicalMigrationStatsFileName)
 
+// Total migration
 Chart.FastLine(([ for row in mg.Data -> row.Year, row.Total ]), Title="Total Migration")
 
-
+// Migration by Stream
 Chart.Combine([ Chart.Line(([ for row in mg.Data -> row.Year, row.``Family Stream``]), Name="Family Stream");
                 Chart.Line(([ for row in mg.Data -> row.Year, row.``Skill Stream``]), Name="Skill Stream");
                 Chart.Line(([ for row in mg.Data -> row.Year, row.``Special Eligibility``]), Name="Special Eligibility") ])
