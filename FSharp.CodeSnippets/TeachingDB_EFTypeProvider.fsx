@@ -111,16 +111,10 @@ query { for teacher in context.Teachers do
         select (teacher.FirstName, teacher.LastName, subject.Title) }
 |> Seq.iter (fun (f, l, t) -> printfn "First Name - %s, Last Name - %s, Subject - %s" f l t)
 
-// To be continued ...
 
-// Possible queries to be run ..
-// Get Count of students 
-// Get all the teachers who teach maths
-// Get all the students in a subject
-// Get all the students marks for a subject
-// Get the number of students taught by a Teacher
-// Get all the students whit marks greater the 9
-// Count the number of students
-// Count the number of students 
-
+// Query, update and delete data by using DbContext
+// Build a query that uses deferred execution
+// Implement lazy loading and eager loading
+// Create a run compiled queries
+// Query data by using Entity SQL 
 

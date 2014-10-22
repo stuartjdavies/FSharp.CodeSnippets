@@ -2,14 +2,19 @@
 #r @"..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll" 
  
 open System
+open System.IO
 open System.Linq
 open Microsoft.WindowsAzure
 open Microsoft.WindowsAzure.Storage
 open Microsoft.WindowsAzure.Storage.Table
- 
-let accountName = ""
-let accountKey = ""
-let url =  ""
+
+//let accountName = ""
+//let accountKey = ""
+//let url =  ""
+
+let accountName = "testaccountstu"
+let accountKey = "U4d4wijY3tqQHNVXYBhmkrpMNjX0zDT9910nV4FYu4ABCLOM9QPjva2uSui96yHuzq707zCAFE2yL99xuy8GPw=="
+let url =  "https://testaccountstu.table.core.windows.net/"
 
 let credentials = new Auth.StorageCredentials(accountName, accountKey)
 let storageAccount = new CloudStorageAccount(credentials, true)
@@ -23,7 +28,7 @@ type Customer(firstName, lastName) =
         new () = Customer(null, null) 
 
 let customers = tableClient.GetTableReference("Customers")
-// customers.DeleteIfExists()
+customers.DeleteIfExists()
 customers.CreateIfNotExists()
 
 customers.Execute(TableOperation.Insert(new Customer(firstName="Joe", lastName="Blogs", Email="2323", PhoneNumber="dsf")))

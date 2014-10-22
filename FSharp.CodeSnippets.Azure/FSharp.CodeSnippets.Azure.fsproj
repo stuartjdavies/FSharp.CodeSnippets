@@ -5,13 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>962f91a9-597f-41eb-acb1-593bb078f222</ProjectGuid>
+    <ProjectGuid>16882bb2-c487-401d-9dd1-239bbe72f3f2</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FSharp.CodeSnippets</RootNamespace>
-    <AssemblyName>FSharp.CodeSnippets</AssemblyName>
+    <RootNamespace>FSharp.CodeSnippets.Azure</RootNamespace>
+    <AssemblyName>FSharp.CodeSnippets.Azure</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
-    <Name>FSharp.CodeSnippets</Name>
+    <Name>FSharp.CodeSnippets.Azure</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\FSharp.CodeSnippets.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\FSharp.CodeSnippets.Azure.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\FSharp.CodeSnippets.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\FSharp.CodeSnippets.Azure.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
@@ -49,61 +49,42 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <None Include="UnitsOfMeasure.fsx" />
-    <None Include="ActivePatternExample.fsx" />
-    <None Include="WriteExcelFile.fsx" />
-    <None Include="OOConceptsWithMonopoly.fsx" />
-    <None Include="CoreFPConcepts.fsx" />
-    <None Include="TeachingDB_EFTypeProvider.fsx" />
-    <None Include="TeachingDB_SqlTypeProvider.fsx" />
-    <None Include="TeachingDB_SqlEntityTypeProvider.fsx" />
-    <None Include="app.config" />
+    <None Include="Azure_TableStorage.fsx" />
+    <None Include="Azure_BlobStorage.fsx" />
+    <None Include="Azure_FileStorage.fsx" />
+    <None Include="Azure_QueueStorage.fsx" />
+    <None Include="Azure_Cache.fsx" />
+    <None Include="Azure_DocumentDB.fsx" />
+    <None Include="Azure_Transactions.fsx" />
+    <None Include="Azure_Retries.fsx" />
+    <None Include="Azure_OldXml.fsx" />
     <None Include="packages.config" />
+    <Content Include="Microsoft.WindowsAzure.Caching\PerformanceCounters.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Microsoft.WindowsAzure.Caching\ClientPerfCountersInstaller.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Deedle">
-      <HintPath>..\packages\Deedle.1.0.1\lib\net40\Deedle.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationServer.Caching.AzureClientHelper">
+      <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.AzureClientHelper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Deedle.RProvider.Plugin">
-      <HintPath>..\packages\Deedle.RPlugin.1.0.1\lib\net40\Deedle.RProvider.Plugin.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationServer.Caching.AzureCommon">
+      <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.AzureCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Excel">
-      <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\Excel.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Client">
+      <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ExcelProvider">
-      <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ExcelProvider.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Foogle.Charts">
-      <HintPath>..\packages\Foogle.Charts.0.0.2\lib\net40\Foogle.Charts.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FSharp.Charting">
-      <HintPath>..\packages\FSharp.Charting.0.90.6\lib\net40\FSharp.Charting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FSharp.Core">
-      <HintPath>..\packages\FSharp.Core.3.0.0.2\lib\net40\FSharp.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FSharp.Data">
-      <HintPath>..\packages\FSharp.Data.2.0.9\lib\net40\FSharp.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FSharp.Data.TypeProviders, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MathNet.Numerics">
-      <HintPath>..\packages\MathNet.Numerics.3.0.0\lib\net40\MathNet.Numerics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MathNet.Numerics.FSharp">
-      <HintPath>..\packages\MathNet.Numerics.FSharp.3.0.0\lib\net40\MathNet.Numerics.FSharp.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Core">
+      <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Data.Edm">
@@ -118,6 +99,10 @@
       <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Web.DistributedCache">
+      <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.Web.DistributedCache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.WindowsAzure.Configuration">
       <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.8.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
       <Private>True</Private>
@@ -127,50 +112,30 @@
       <HintPath>..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.WindowsFabric.Common">
+      <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.WindowsFabric.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsFabric.Data.Common">
+      <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.WindowsFabric.Data.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RDotNet">
-      <HintPath>..\packages\R.NET.Community.1.5.15\lib\net40\RDotNet.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RDotNet.FSharp">
-      <HintPath>..\packages\R.NET.Community.FSharp.0.1.8\lib\net40\RDotNet.FSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RDotNet.NativeLibrary">
-      <HintPath>..\packages\R.NET.Community.1.5.15\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RProvider">
-      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RProvider.DesignTime">
-      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.DesignTime.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RProvider.Runtime">
-      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.Runtime.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RProvider.Server">
-      <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.Server.exe</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Numerics" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Spatial">
       <HintPath>..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
