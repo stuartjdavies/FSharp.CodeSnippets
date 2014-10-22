@@ -53,6 +53,8 @@
     <None Include="Azure_BlobStorage.fsx" />
     <None Include="Azure_FileStorage.fsx" />
     <None Include="Azure_QueueStorage.fsx" />
+    <None Include="Azure_ServiceBus_Queues.fsx" />
+    <None Include="Azure_ServiceBus_Topics.fsx" />
     <None Include="Azure_Cache.fsx" />
     <None Include="Azure_DocumentDB.fsx" />
     <None Include="Azure_Transactions.fsx" />
@@ -99,6 +101,10 @@
       <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ServiceBus">
+      <HintPath>..\packages\WindowsAzure.ServiceBus.2.4.6.0\lib\net40-full\Microsoft.ServiceBus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.DistributedCache">
       <HintPath>..\packages\Microsoft.WindowsAzure.Caching.2.4.0.0\lib\net40-full\Microsoft.Web.DistributedCache.dll</HintPath>
       <Private>True</Private>
@@ -132,10 +138,13 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Spatial">
       <HintPath>..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
