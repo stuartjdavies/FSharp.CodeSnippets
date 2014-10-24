@@ -55,11 +55,7 @@
     <None Include="Azure_QueueStorage.fsx" />
     <None Include="Azure_ServiceBus_Queues.fsx" />
     <None Include="Azure_ServiceBus_Topics.fsx" />
-    <None Include="Azure_Cache.fsx" />
-    <None Include="Azure_DocumentDB.fsx" />
-    <None Include="Azure_Transactions.fsx" />
-    <None Include="Azure_Retries.fsx" />
-    <None Include="Azure_OldXml.fsx" />
+    <None Include="Azure_ServiceBus_Relay.fsx" />
     <None Include="packages.config" />
     <Content Include="Microsoft.WindowsAzure.Caching\PerformanceCounters.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
