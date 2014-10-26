@@ -69,6 +69,14 @@
       <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.3\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\packages\itextsharp.pdfa.5.5.3\lib\itextsharp.pdfa.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MathNet.Numerics">
       <HintPath>..\packages\MathNet.Numerics.3.0.0\lib\net40\MathNet.Numerics.dll</HintPath>
       <Private>True</Private>
@@ -127,6 +135,7 @@
     <None Include="ItalianMinistryOfHealth_odata.fsx" />
     <None Include="SeekJobAds.fsx" />
     <None Include="MelbourneUrbanForestTreeData.fsx" />
+    <None Include="myki.fsx" />
     <None Include="RTutorialInFSharp.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />

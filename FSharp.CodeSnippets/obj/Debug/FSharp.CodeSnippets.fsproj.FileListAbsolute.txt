@@ -94,3 +94,6 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Deb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\ru\System.Spatial.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\zh-Hans\System.Spatial.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\itextsharp.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\itextsharp.pdfa.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets\bin\Debug\itextsharp.xml
