@@ -5,13 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4e33ff88-f566-4c35-951b-e4970bfad7f1</ProjectGuid>
+    <ProjectGuid>62a770a0-328d-4a94-9a42-acbebbf6aac4</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FSharp.CodeSnippets.DataScience.Twitter</RootNamespace>
-    <AssemblyName>FSharp.CodeSnippets.DataScience.Twitter</AssemblyName>
+    <RootNamespace>FSharp.CodeSnippets.AWS</RootNamespace>
+    <AssemblyName>FSharp.CodeSnippets.AWS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
-    <Name>FSharp.CodeSnippets.DataScience.Twitter</Name>
+    <Name>FSharp.CodeSnippets.AWS</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\FSharp.CodeSnippets.DataScience.Twitter.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\FSharp.CodeSnippets.AWS.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,11 +30,11 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\FSharp.CodeSnippets.DataScience.Twitter.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\FSharp.CodeSnippets.AWS.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FSharp.Data.Toolbox.Twitter">
-      <HintPath>..\packages\FSharp.Data.Toolbox.Twitter.0.2.1\lib\net40\FSharp.Data.Toolbox.Twitter.dll</HintPath>
+    <Reference Include="AWSSDK">
+      <HintPath>..\packages\AWSSDK.2.3.5.0\lib\net45\AWSSDK.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
@@ -44,12 +44,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library1.fs" />
-    <None Include="Script.fsx" />
-    <None Include="app.config" />
+    <None Include="DynamoDB_LoadSampleData.fsx" />
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>

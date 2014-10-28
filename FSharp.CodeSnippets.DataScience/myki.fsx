@@ -10,9 +10,8 @@ open System.Text
 open System.Globalization
 open FSharp.Charting
 
-type MikiTransaction = { Date : string; TransactionType : string; Service : string; Zone : String; 
+type MikiTransaction = { Date : DateTime; TransactionType : string; Service : string; Zone : String; 
                          Description : string; Credit : Single; Debit : Single; MikiBalance : Single; }
-
 
 let ParseAmountField(rawString : string) = let passed, amt = Single.TryParse(s=(rawString.Replace("$", "").Trim()))
                                            if (passed) then
@@ -33,7 +32,7 @@ let trans = seq { 1 .. reader.NumberOfPages }
                                                               |> List.rev 
                                                               |> (Seq.fold(fun acc t -> String.Format("{0} {1}", (tokens.[t]), acc)) "")                                                                                              
                                             { 
-                                                MikiTransaction.Date = tokens.[0]                                              
+                                                MikiTransaction.Date = DateTime.ParseExact(tokens.[0], """dd/MM/yyyy""", System.Globalization.CultureInfo.InvariantCulture)                                             
                                                 TransactionType = String.Format("{0} {1}", tokens.[2], tokens.[3]); 
                                                 Zone = tokens.[5]; Service = tokens.[4]; Description = description.Trim(); 
                                                 Credit = ParseAmountField(tokens.[tokens.Length - 3]);                                        
@@ -44,16 +43,32 @@ let trans = seq { 1 .. reader.NumberOfPages }
 
 reader.Close()
 
-
+// Display Transactions 
+query { for t in trans do 
+        sortBy(t.Date)
+        select(t) 
+} |> Seq.iter(fun t -> printfn "Date - %s, Description - %s Debit - %0.2f" 
+                                               (t.Date.ToString("""dd/MM/yyyy""")) t.Description t.Debit)
 
 let debits = trans |> Seq.filter(fun t -> not (Single.IsNaN t.Debit))
+
+// Money Spent per month
+query { for d in debits do         
+        groupBy(String.Format("{0}/{1}", d.Date.Month, d.Date.Year)) into g
+        let total = query { for debit in g do
+                            sumBy debit.Debit }
+        select(g.Key, total) 
+} |> fun ds -> Chart.Bar(ds, Title="Amount spent each month on myki", XTitle="Month", YTitle="($) Dollars")
           
-// Chart
+// Debits line graph
 debits |> Seq.map(fun t -> (t.Date, t.Debit)) |> Chart.Line
 
+// Top 10 Debits
 debits |> Seq.sortBy(fun t -> -t.Debit)       
        |> Seq.take 10       
        |> Seq.iteri(fun i t -> printfn "%d. Date - %s, Description - %s Debit - %0.2f" (i + 1) (t.Date.ToString()) t.Description t.Debit)
+
+
 
 // Top 10 Daily amount 
 debits |> Seq.groupBy(fun t -> t.Date)

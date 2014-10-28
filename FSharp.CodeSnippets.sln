@@ -16,11 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C5F60
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.DataScience", "FSharp.CodeSnippets.DataScience\FSharp.CodeSnippets.DataScience.fsproj", "{8EECEE8B-0974-4F7C-A3A1-5523376DF133}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.DataScience.Twitter", "FSharp.CodeSnippets.DataScience.Twitter\FSharp.CodeSnippets.DataScience.Twitter.fsproj", "{4E33FF88-F566-4C35-951B-E4970BFAD7F1}"
-EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.Azure", "FSharp.CodeSnippets.Azure\FSharp.CodeSnippets.Azure.fsproj", "{16882BB2-C487-401D-9DD1-239BBE72F3F2}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.Parallel", "FSharp.CodeSnippets.Parallel\FSharp.CodeSnippets.Parallel.fsproj", "{A9621139-1E81-4EE8-8D79-18E39D6F3E2B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.AWS", "FSharp.CodeSnippets.AWS\FSharp.CodeSnippets.AWS.fsproj", "{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,10 +44,6 @@ Global
 		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E33FF88-F566-4C35-951B-E4970BFAD7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E33FF88-F566-4C35-951B-E4970BFAD7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E33FF88-F566-4C35-951B-E4970BFAD7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E33FF88-F566-4C35-951B-E4970BFAD7F1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{16882BB2-C487-401D-9DD1-239BBE72F3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{16882BB2-C487-401D-9DD1-239BBE72F3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16882BB2-C487-401D-9DD1-239BBE72F3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -56,6 +52,10 @@ Global
 		{A9621139-1E81-4EE8-8D79-18E39D6F3E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9621139-1E81-4EE8-8D79-18E39D6F3E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9621139-1E81-4EE8-8D79-18E39D6F3E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
