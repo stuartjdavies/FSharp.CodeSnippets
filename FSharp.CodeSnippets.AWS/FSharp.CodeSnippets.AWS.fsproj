@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DynamoDB_LoadSampleData.fsx" />
+    <None Include="DynamoDB_Query.fsx" />
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
