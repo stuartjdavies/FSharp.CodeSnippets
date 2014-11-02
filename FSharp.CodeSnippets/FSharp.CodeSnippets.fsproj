@@ -57,6 +57,7 @@
     <None Include="TeachingDB_EFTypeProvider.fsx" />
     <None Include="TeachingDB_SqlTypeProvider.fsx" />
     <None Include="TeachingDB_SqlEntityTypeProvider.fsx" />
+    <None Include="ComputaionalExpressions.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="dsl.fsx" />
