@@ -137,10 +137,11 @@
     <None Include="MelbourneUrbanForestTreeData.fsx" />
     <None Include="myki.fsx" />
     <None Include="RTutorialInFSharp.fsx" />
+    <None Include="CricketCaptains.fsx" />
+    <None Include="CO2Emissions.fsx" />
+    <None Include="TestTwitter.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
-    <None Include="TestTwitter.fsx" />
-    <None Include="WifeStats.fsx" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

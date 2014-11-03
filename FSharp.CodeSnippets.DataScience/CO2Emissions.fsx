@@ -18,8 +18,3 @@ df?Codes <- df.RowKeys
 
 let map = R.joinCountryData2Map(df,"ISO3","Codes")
 R.mapCountryData(map,"Emissions2013") 
-
-countries.``American Samoa``.Indicators.``CO2 emissions (kt)``.[2010]
-countries.Australia.Indicators.``CO2 emissions (kt)``.[2014]
-
-
