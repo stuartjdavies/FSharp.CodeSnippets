@@ -54,14 +54,15 @@
     <None Include="WriteExcelFile.fsx" />
     <None Include="OOConceptsWithMonopoly.fsx" />
     <None Include="CoreFPConcepts.fsx" />
+    <None Include="CarProductionLine.fsx" />
+    <None Include="DataStructures.fsx" />
+    <None Include="ComputaionalExpressions.fsx" />
     <None Include="TeachingDB_EFTypeProvider.fsx" />
     <None Include="TeachingDB_SqlTypeProvider.fsx" />
     <None Include="TeachingDB_SqlEntityTypeProvider.fsx" />
-    <None Include="ComputaionalExpressions.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="dsl.fsx" />
-    <None Include="DataStructures.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Deedle">
