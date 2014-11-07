@@ -7,8 +7,6 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets", "FSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSharp.CodeSnippets.Data.EF", "FSharp.CodeSnippets.Data.EF\FSharp.CodeSnippets.Data.EF.csproj", "{206F9A60-31CD-45DF-AA99-B9ECBEB1D50A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.Data", "FSharp.CodeSnippets.Data\FSharp.CodeSnippets.Data.fsproj", "{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C5F6072-D42B-4F29-A3A8-52E316BD149B}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
@@ -36,10 +34,6 @@ Global
 		{206F9A60-31CD-45DF-AA99-B9ECBEB1D50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{206F9A60-31CD-45DF-AA99-B9ECBEB1D50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{206F9A60-31CD-45DF-AA99-B9ECBEB1D50A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34DE5E5A-5C23-45B9-819E-828DFB4CDC9B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EECEE8B-0974-4F7C-A3A1-5523376DF133}.Release|Any CPU.ActiveCfg = Release|Any CPU

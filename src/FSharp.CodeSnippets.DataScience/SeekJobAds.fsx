@@ -17,8 +17,8 @@ open System.Linq
 open System.Data
 open FSharp.Charting
 
-let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.Data\SEEK_AU_EI_Data_Sep2014.xls"
-type SeekJobsSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.Data\SEEK_AU_EI_Data_Sep2014.xls", "SEEK New Job Ads SA!A2:J161">
+let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\SEEK_AU_EI_Data_Sep2014.xls"
+type SeekJobsSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\SEEK_AU_EI_Data_Sep2014.xls", "SEEK New Job Ads SA!A2:J161">
 let seekJobs = new SeekJobsSchema(filePath)
 
 let ToDate() = DateTime.Parse("")

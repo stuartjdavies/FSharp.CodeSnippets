@@ -17,9 +17,10 @@ open System.Linq
 open System.Data
 open FSharp.Charting
 
-let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\850101.xls"
+
+let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\850101.xls" 
 let excelFile = @"http://www.abs.gov.au/ausstats/meisubs.NSF/log?openagent&850101.xls&8501.0&Time%20Series%20Spreadsheet&9AD05A7541BD9AA3CA257D630017AAC5&0&Aug%202014&01.10.2014&Latest"
-type RetailTurnoverFiguresSchema = ExcelFile<"""C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\850101.xls""", "Data1!A1:V399", true>
+type RetailTurnoverFiguresSchema = ExcelFile<"""C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\850101.xls""", "Data1!A1:V399", true>
 let retailTurnoverFigures = new RetailTurnoverFiguresSchema(filePath)
 
 let r = retailTurnoverFigures.Data |> Seq.length
@@ -35,7 +36,7 @@ let retailFigures = retailTurnoverFigures.Data
                                          r.``Turnover ;  Total (State) ;  Total (Industry) ;``.AsFloat())) 
                                                    
 
-type RetailTurnoverDateExcelSchema = ExcelFile<"""C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\850101.xls""", "Data1!A10:A399", true>
+type RetailTurnoverDateExcelSchema = ExcelFile<"""C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\850101.xls""", "Data1!A10:A399", true>
 let retailTurnoverSeriesIds = new RetailTurnoverDateExcelSchema(filePath)
 let seriesIdDates = retailTurnoverSeriesIds.Data |> Seq.map(fun r -> DateTime.FromOADate(r.``Series ID``.AsFloat()))
            

@@ -139,6 +139,7 @@
     <None Include="RTutorialInFSharp.fsx" />
     <None Include="CricketCaptains.fsx" />
     <None Include="CO2Emissions.fsx" />
+    <None Include="DeedlePlay.fsx" />
     <None Include="TestTwitter.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />

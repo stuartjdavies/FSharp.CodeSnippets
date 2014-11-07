@@ -16,8 +16,8 @@ open Microsoft.FSharp.Data.TypeProviders
 open System.Linq
 open System.Data
 
-let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\NGERS-2009-10.xlsx"
-type EmissionsExcelSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\NGERS-2009-10.xlsx">
+let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\NGERS-2009-10.xlsx"
+type EmissionsExcelSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\NGERS-2009-10.xlsx">
 let emissions = new EmissionsExcelSchema(filePath)
 
 let rows = emissions.Data                 

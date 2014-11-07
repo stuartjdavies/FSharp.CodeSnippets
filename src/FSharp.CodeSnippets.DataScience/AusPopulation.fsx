@@ -20,8 +20,8 @@ open System.Data
 //
 // Statistics of Highly skilled visas approved in 2014
 //
-let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\FA140301378-3.xls"
-type ApplicationsSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\FA140301378-3.xls", "2012-13!A8:F65536">
+let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\FA140301378-3.xls"
+type ApplicationsSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\FA140301378-3.xls", "2012-13!A8:F65536">
 
 let applications = new ApplicationsSchema(filePath)
 
@@ -63,8 +63,8 @@ applicationsApprovedByDesc |> Seq.take 10
 // 
 // Migration Program By Outcome
 //
-let historicalMigrationStatsFileName = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\historical-migration-stats.xls"
-type MigrationProgramByOutcomeSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\historical-migration-stats.xls", "3.2!C14:G44">
+let historicalMigrationStatsFileName = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\historical-migration-stats.xls"
+type MigrationProgramByOutcomeSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\historical-migration-stats.xls", "3.2!C14:G44">
 
 let mg = new MigrationProgramByOutcomeSchema(historicalMigrationStatsFileName)
 
@@ -84,7 +84,7 @@ Chart.Combine([ Chart.Line(([ for row in mg.Data -> row.Year, row.``Family Strea
 //
 // Migration by Group
 //
-type MigrationProgramByGroupSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\historical-migration-stats.xls", "2.1!B14:T274">
+type MigrationProgramByGroupSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\historical-migration-stats.xls", "2.1!B14:T274">
  
 let mgByGroup = new MigrationProgramByGroupSchema(historicalMigrationStatsFileName)
 

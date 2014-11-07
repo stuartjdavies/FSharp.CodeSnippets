@@ -17,11 +17,11 @@ open Microsoft.FSharp.Data.TypeProviders
 open System.Linq
 open System.Data
 
-let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\AusBeerConsuption.xls"
-type LitresOfPureAlcoholSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\AusBeerConsuption.xls", "Table_1!B6:G75", true>
-type PerCapitaConsumptionSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\AusBeerConsuption.xls", "Table_1!H6:N75", true>
-type RawDatesSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\AusBeerConsuption.xls", "Table_1!A6:A75", true>
-type CiderSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Data\AusBeerConsuption.xls", "Table_6!A6:C15", true>
+let filePath = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\AusBeerConsuption.xls"
+type LitresOfPureAlcoholSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\AusBeerConsuption.xls", "Table_1!B6:G75", true>
+type PerCapitaConsumptionSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\AusBeerConsuption.xls", "Table_1!H6:N75", true>
+type RawDatesSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\AusBeerConsuption.xls", "Table_1!A6:A75", true>
+type CiderSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\AusBeerConsuption.xls", "Table_6!A6:C15", true>
 let litresOfPureAlcohol = new LitresOfPureAlcoholSchema(filePath)
 let perCapitaConsumption = new PerCapitaConsumptionSchema(filePath)
 let rawDates = new RawDatesSchema(filePath)
