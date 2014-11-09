@@ -36,7 +36,7 @@ let retailFigures = retailTurnoverFigures.Data
                                          r.``Turnover ;  Total (State) ;  Total (Industry) ;``.AsFloat())) 
                                                    
 
-type RetailTurnoverDateExcelSchema = ExcelFile<"""C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\850101.xls""", "Data1!A10:A399", true>
+type RetailTurnoverDateExcelSchema = ExcelFile<"""Data\850101.xls""", "Data1!A10:A399", true>
 let retailTurnoverSeriesIds = new RetailTurnoverDateExcelSchema(filePath)
 let seriesIdDates = retailTurnoverSeriesIds.Data |> Seq.map(fun r -> DateTime.FromOADate(r.``Series ID``.AsFloat()))
            

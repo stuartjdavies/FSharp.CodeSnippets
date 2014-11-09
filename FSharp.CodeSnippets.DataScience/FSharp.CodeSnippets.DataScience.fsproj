@@ -33,6 +33,10 @@
     <DocumentationFile>bin\Release\FSharp.CodeSnippets.DataScience.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ApiaryProvider">
+      <HintPath>..\packages\ApiaryProvider.1.0.2\lib\net40\ApiaryProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Deedle">
       <HintPath>..\packages\Deedle.1.0.1\lib\net40\Deedle.dll</HintPath>
       <Private>True</Private>
@@ -65,6 +69,30 @@
       <HintPath>..\packages\FSharp.Data.2.0.9\lib\net40\FSharp.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FunScript">
+      <HintPath>..\packages\FunScript.1.1.84\lib\net40\FunScript.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FunScript.Data">
+      <HintPath>..\packages\FunScript.Data.1.1.84\lib\net40\FunScript.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FunScript.Interop">
+      <HintPath>..\packages\FunScript.1.1.84\lib\net40\FunScript.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FunScript.TypeScript.Binding.highcharts">
+      <HintPath>..\packages\FunScript.TypeScript.Binding.highcharts.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.highcharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FunScript.TypeScript.Binding.jquery">
+      <HintPath>..\packages\FunScript.TypeScript.Binding.jquery.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.jquery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FunScript.TypeScript.Binding.lib">
+      <HintPath>..\packages\FunScript.TypeScript.Binding.lib.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.lib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
@@ -86,6 +114,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationUI" />
     <Reference Include="RDotNet">
       <HintPath>..\packages\R.NET.Community.1.5.15\lib\net40\RDotNet.dll</HintPath>
       <Private>True</Private>
@@ -117,7 +148,12 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <None Include="WorldPoplutationGrowth.fsx" />
@@ -140,7 +176,9 @@
     <None Include="CricketCaptains.fsx" />
     <None Include="CO2Emissions.fsx" />
     <None Include="DeedleExperiments.fsx" />
+    <None Include="AusRedMeatProduction.fsx" />
     <None Include="TestTwitter.fsx" />
+    <None Include="AnalyseFiles.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
   </ItemGroup>
