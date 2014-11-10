@@ -63,8 +63,11 @@
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="dsl.fsx" />
+    <None Include="DateDiffApp.fsx" />
+    <None Include="DateDiffAppMain.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="Deedle">
       <HintPath>..\packages\Deedle.1.0.1\lib\net40\Deedle.dll</HintPath>
       <Private>True</Private>
@@ -98,6 +101,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Data.TypeProviders, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="FSharpx.TypeProviders.Xaml">
+      <HintPath>..\packages\FSharpx.TypeProviders.Xaml.1.8.41\lib\40\FSharpx.TypeProviders.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
@@ -144,6 +151,9 @@
       <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationUI" />
     <Reference Include="RDotNet">
       <HintPath>..\packages\R.NET.Community.1.5.15\lib\net40\RDotNet.dll</HintPath>
       <Private>True</Private>
@@ -156,6 +166,7 @@
       <HintPath>..\packages\R.NET.Community.1.5.15\lib\net40\RDotNet.NativeLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ReachFramework" />
     <Reference Include="RProvider">
       <HintPath>..\packages\RProvider.1.0.13\lib\net40\RProvider.dll</HintPath>
       <Private>True</Private>
@@ -176,13 +187,20 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Spatial">
       <HintPath>..\packages\System.Spatial.5.6.2\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
