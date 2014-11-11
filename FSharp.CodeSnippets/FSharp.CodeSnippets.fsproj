@@ -60,11 +60,11 @@
     <None Include="TeachingDB_EFTypeProvider.fsx" />
     <None Include="TeachingDB_SqlTypeProvider.fsx" />
     <None Include="TeachingDB_SqlEntityTypeProvider.fsx" />
-    <None Include="app.config" />
-    <None Include="packages.config" />
     <None Include="dsl.fsx" />
     <None Include="DateDiffApp.fsx" />
     <None Include="DateDiffAppMain.xaml" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
@@ -101,6 +101,26 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Data.TypeProviders, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="FSharp.Management">
+      <HintPath>..\packages\FSharp.Management.0.1.1\lib\net40\FSharp.Management.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.Management.PowerShell">
+      <HintPath>..\packages\FSharp.Management.0.1.1\lib\net40\FSharp.Management.PowerShell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.Management.PowerShell.ExternalRuntime">
+      <HintPath>..\packages\FSharp.Management.0.1.1\lib\net40\FSharp.Management.PowerShell.ExternalRuntime.exe</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.Management.WMI">
+      <HintPath>..\packages\FSharp.Management.0.1.1\lib\net40\FSharp.Management.WMI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FSharp.Management.WMI.DesignTime">
+      <HintPath>..\packages\FSharp.Management.0.1.1\lib\net40\FSharp.Management.WMI.DesignTime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FSharpx.TypeProviders.Xaml">
       <HintPath>..\packages\FSharpx.TypeProviders.Xaml.1.8.41\lib\40\FSharpx.TypeProviders.Xaml.dll</HintPath>
       <Private>True</Private>

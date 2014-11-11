@@ -179,6 +179,7 @@
     <None Include="AusRedMeatProduction.fsx" />
     <None Include="TestTwitter.fsx" />
     <None Include="AnalyseFiles.fsx" />
+    <None Include="EventLogWithPS.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
   </ItemGroup>
