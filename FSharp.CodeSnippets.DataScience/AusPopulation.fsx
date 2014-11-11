@@ -63,8 +63,8 @@ applicationsApprovedByDesc |> Seq.take 10
 // 
 // Migration Program By Outcome
 //
-let historicalMigrationStatsFileName = @"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\historical-migration-stats.xls"
-type MigrationProgramByOutcomeSchema = ExcelFile<"C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\Data\historical-migration-stats.xls", "3.2!C14:G44">
+let historicalMigrationStatsFileName = __SOURCE_DIRECTORY__ + @"\Data\historical-migration-stats.xls"
+type MigrationProgramByOutcomeSchema = ExcelFile<"Data\historical-migration-stats.xls", "3.2!C14:G44">
 
 let mg = new MigrationProgramByOutcomeSchema(historicalMigrationStatsFileName)
 
