@@ -33,7 +33,7 @@ type CarBuilder() =
                     match(x) with
                     | Success x -> f(x) 
                     | Failure x -> Failure x                     
-        member this.Delay(f) = f()
+        //member this.Delay(f) = f()
         member this.Return(x) = Success x
 
 let CarAssemblyLine = new CarBuilder()
@@ -65,6 +65,10 @@ let CreateBarinaSpark(color) = CarAssemblyLine {
                                
                                     return carAfterStage6
                                 }
+
+let CreateBarinaSparkLongHand(color) = CarAssemblyLine.Bind(GetBarinaSparkBody(), 
+                                                                fun x -> CarAssemblyLine.Bind(PaintBody(color, x), 
+                                                                                                    fun x -> CarAssemblyLine.Return(x)))
 
 let rec GetCompoents(c : Component) =      
           c.Components |> Seq.fold(fun acc c -> if (List.length(c.Components) > 0)  then

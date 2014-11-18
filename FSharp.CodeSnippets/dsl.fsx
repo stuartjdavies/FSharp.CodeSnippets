@@ -52,4 +52,13 @@ let Add([<ParamArray>] args: Object[]) = ()
 
 
 let myOrder = new Order()
-Add To myOrder a Large BigMac With Coke
+//Add To myOrder a Large BigMac With Coke
+
+
+
+//let x, y, z = a
+
+//let ab = x + y in printf "%d" ab
+
+let foo(p) = let (_,_,z) = p
+             z
