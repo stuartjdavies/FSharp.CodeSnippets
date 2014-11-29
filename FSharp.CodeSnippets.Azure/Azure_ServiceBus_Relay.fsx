@@ -15,7 +15,6 @@ open System.ServiceModel
 let connectionString = ""
 let namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString)
 let key=""
-//let key="Endpoint=sb://stuarttestservicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=mhub6BPxFjKiBT9ovNBlbln5SD2U2MyeeUsZJ0lCZWo="
 let ns=""
 
 namespaceManager.
