@@ -124,3 +124,7 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataSci
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.pdb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.xml
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.fsprojResolveAssemblyReference.cache
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Google.DataTable.Net.Wrapper.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Newtonsoft.Json.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\XPlot.GoogleCharts.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Newtonsoft.Json.xml

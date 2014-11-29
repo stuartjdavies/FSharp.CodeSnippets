@@ -32,6 +32,53 @@
     <WarningLevel>3</WarningLevel>
     <DocumentationFile>bin\Release\FSharp.CodeSnippets.DataScience.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '11.0'">
+      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')">
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets')">
+        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets</FSharpTargetsPath>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <Import Project="$(FSharpTargetsPath)" />
+  <ItemGroup>
+    <None Include="WorldPoplutationGrowth.fsx" />
+    <None Include="UnemploymentTrends.fsx" />
+    <None Include="Deficit.fsx" />
+    <None Include="Debt.fsx" />
+    <None Include="WestpackStockPriceChanges.fsx" />
+    <None Include="AusRetailTurnoverByIndustry.fsx" />
+    <None Include="AusGreenHouseGasEmissions.fsx" />
+    <None Include="AusPopulationClock.fsx" />
+    <None Include="AusBankStockPrices.fsx" />
+    <None Include="GlobalWeatherSOAPService.fsx" />
+    <None Include="AusPopulation.fsx" />
+    <None Include="AusAlcoholConsumption.fsx" />
+    <None Include="ItalianMinistryOfHealth_odata.fsx" />
+    <None Include="SeekJobAds.fsx" />
+    <None Include="MelbourneUrbanForestTreeData.fsx" />
+    <None Include="myki.fsx" />
+    <None Include="RTutorialInFSharp.fsx" />
+    <None Include="CricketCaptains.fsx" />
+    <None Include="CO2Emissions.fsx" />
+    <None Include="DeedleExperiments.fsx" />
+    <None Include="AusRedMeatProduction.fsx" />
+    <None Include="TestTwitter.fsx" />
+    <None Include="AnalyseFiles.fsx" />
+    <None Include="EventLogWithPS.fsx" />
+    <None Include="AustralianMeatProduced.fsx" />
+    <None Include="LabourForceStatusBySexTrend.fsx" />
+    <None Include="packages.config" />
+    <None Include="app.config" />
+    <Content Include="Google.DataTable.Net.Wrapper.XML" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="ApiaryProvider">
       <HintPath>..\packages\ApiaryProvider.1.0.2\lib\net40\ApiaryProvider.dll</HintPath>
@@ -93,6 +140,10 @@
       <HintPath>..\packages\FunScript.TypeScript.Binding.lib.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.lib.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Google.DataTable.Net.Wrapper">
+      <HintPath>..\packages\Google.DataTable.Net.Wrapper.3.1.0.0\lib\Google.DataTable.Net.Wrapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>..\packages\ExcelProvider.0.1.2\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>True</Private>
@@ -114,6 +165,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="PresentationUI" />
@@ -154,59 +209,16 @@
     <Reference Include="UIAutomationProvider" />
     <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="WorldPoplutationGrowth.fsx" />
-    <None Include="UnemploymentTrends.fsx" />
-    <None Include="Deficit.fsx" />
-    <None Include="Debt.fsx" />
-    <None Include="WestpackStockPriceChanges.fsx" />
-    <None Include="AusRetailTurnoverByIndustry.fsx" />
-    <None Include="AusGreenHouseGasEmissions.fsx" />
-    <None Include="AusPopulationClock.fsx" />
-    <None Include="AusBankStockPrices.fsx" />
-    <None Include="GlobalWeatherSOAPService.fsx" />
-    <None Include="AusPopulation.fsx" />
-    <None Include="AusAlcoholConsumption.fsx" />
-    <None Include="ItalianMinistryOfHealth_odata.fsx" />
-    <None Include="SeekJobAds.fsx" />
-    <None Include="MelbourneUrbanForestTreeData.fsx" />
-    <None Include="myki.fsx" />
-    <None Include="RTutorialInFSharp.fsx" />
-    <None Include="CricketCaptains.fsx" />
-    <None Include="CO2Emissions.fsx" />
-    <None Include="DeedleExperiments.fsx" />
-    <None Include="AusRedMeatProduction.fsx" />
-    <None Include="TestTwitter.fsx" />
-    <None Include="AnalyseFiles.fsx" />
-    <None Include="EventLogWithPS.fsx" />
-    <None Include="AustralianMeatProduced.fsx" />
-    <None Include="packages.config" />
-    <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FSharp.CodeSnippets.TypeProviders\FSharp.CodeSnippets.TypeProviders.fsproj">
       <Name>FSharp.CodeSnippets.TypeProviders</Name>
       <Project>{ee680d06-2988-4282-9182-ee0bde5f0f1e}</Project>
       <Private>True</Private>
     </ProjectReference>
+    <Reference Include="XPlot.GoogleCharts">
+      <HintPath>..\packages\XPlot.GoogleCharts.1.0.1\Lib\Net45\XPlot.GoogleCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
-  <PropertyGroup>
-    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
-  </PropertyGroup>
-  <Choose>
-    <When Condition="'$(VisualStudioVersion)' == '11.0'">
-      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets')">
-        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.0\Framework\v4.0\Microsoft.FSharp.Targets</FSharpTargetsPath>
-      </PropertyGroup>
-    </When>
-    <Otherwise>
-      <PropertyGroup Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets')">
-        <FSharpTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.FSharp.Targets</FSharpTargetsPath>
-      </PropertyGroup>
-    </Otherwise>
-  </Choose>
-  <Import Project="$(FSharpTargetsPath)" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
