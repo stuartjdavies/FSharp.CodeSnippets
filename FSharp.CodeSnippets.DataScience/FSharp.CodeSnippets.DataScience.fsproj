@@ -180,8 +180,16 @@
     <None Include="TestTwitter.fsx" />
     <None Include="AnalyseFiles.fsx" />
     <None Include="EventLogWithPS.fsx" />
+    <None Include="AustralianMeatProduced.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FSharp.CodeSnippets.TypeProviders\FSharp.CodeSnippets.TypeProviders.fsproj">
+      <Name>FSharp.CodeSnippets.TypeProviders</Name>
+      <Project>{ee680d06-2988-4282-9182-ee0bde5f0f1e}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

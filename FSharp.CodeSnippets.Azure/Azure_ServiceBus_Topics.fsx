@@ -8,7 +8,7 @@ open Microsoft.ServiceBus
 open Microsoft.ServiceBus.Messaging
 open System.Collections.Generic
 
-let connectionString = @"Endpoint=sb://stuarttestservicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=mhub6BPxFjKiBT9ovNBlbln5SD2U2MyeeUsZJ0lCZWo="
+let connectionString = ""
 
 let namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
 

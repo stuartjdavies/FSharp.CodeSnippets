@@ -8,13 +8,9 @@ open Microsoft.WindowsAzure
 open Microsoft.WindowsAzure.Storage
 open Microsoft.WindowsAzure.Storage.Table
 
-//let accountName = ""
-//let accountKey = ""
-//let url =  ""
-
-let accountName = "testaccountstu"
-let accountKey = "U4d4wijY3tqQHNVXYBhmkrpMNjX0zDT9910nV4FYu4ABCLOM9QPjva2uSui96yHuzq707zCAFE2yL99xuy8GPw=="
-let url =  "https://testaccountstu.table.core.windows.net/"
+let accountName = ""
+let accountKey = ""
+let url =  ""
 
 let credentials = new Auth.StorageCredentials(accountName, accountKey)
 let storageAccount = new CloudStorageAccount(credentials, true)

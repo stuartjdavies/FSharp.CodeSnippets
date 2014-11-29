@@ -20,6 +20,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.Paralle
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.AWS", "FSharp.CodeSnippets.AWS\FSharp.CodeSnippets.AWS.fsproj", "{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.CodeSnippets.TypeProviders", "FSharp.CodeSnippets.TypeProviders\FSharp.CodeSnippets.TypeProviders.fsproj", "{EE680D06-2988-4282-9182-EE0BDE5F0F1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62A770A0-328D-4A94-9A42-ACBEBBF6AAC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE680D06-2988-4282-9182-EE0BDE5F0F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE680D06-2988-4282-9182-EE0BDE5F0F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE680D06-2988-4282-9182-EE0BDE5F0F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE680D06-2988-4282-9182-EE0BDE5F0F1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

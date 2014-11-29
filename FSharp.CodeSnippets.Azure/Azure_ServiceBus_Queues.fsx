@@ -7,8 +7,8 @@ open System.Linq
 open Microsoft.ServiceBus
 open Microsoft.ServiceBus.Messaging
 
-let connectionString = @"Endpoint=sb://stuarttestservicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=mhub6BPxFjKiBT9ovNBlbln5SD2U2MyeeUsZJ0lCZWo="
-let queueName = "TestQueue"
+let connectionString = ""
+let queueName = ""
 
 let namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
 

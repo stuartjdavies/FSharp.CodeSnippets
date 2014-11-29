@@ -120,3 +120,7 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataSci
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.pdb
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.xml
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.fsprojResolveAssemblyReference.cache
