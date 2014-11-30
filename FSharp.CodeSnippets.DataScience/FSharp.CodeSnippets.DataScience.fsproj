@@ -74,7 +74,8 @@
     <None Include="AnalyseFiles.fsx" />
     <None Include="EventLogWithPS.fsx" />
     <None Include="AustralianMeatProduced.fsx" />
-    <None Include="LabourForceStatusBySexTrend.fsx" />
+    <None Include="AusLabourForceStatusBySexTrend.fsx" />
+    <None Include="AusLabourUnderUtilByAgeAndSex.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
     <Content Include="Google.DataTable.Net.Wrapper.XML" />

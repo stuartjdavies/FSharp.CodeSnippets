@@ -33,4 +33,3 @@ let chart =
     |> Chart.WithOptions options
     |> Chart.WithLabels ["Male"; "Female"]
     |> Chart.Show
-
