@@ -1,4 +1,6 @@
-﻿//
+﻿#load "../packages/FsLab.0.0.19/FsLab.fsx"
+
+//
 // Based on the example, O rewrote in F#
 // http://msdn.microsoft.com/en-us/library/dd460713(v=vs.110).aspx
 // 
@@ -12,9 +14,7 @@ open System.Diagnostics;
 open System.Linq;
 open System.Threading;
 open System.Threading.Tasks;
-
-
-Parallel.ForEach((seq { 0 .. 20 }), (fun x -> (printfn "Item i - %d" x)))
+open FSharp.Charting
 
 // Example
 let InitializeMatrix(rows, cols) =
@@ -34,30 +34,25 @@ let MultiplyMatricesParallel(matA :  double [,],  matB :  double [,], result :  
                                                                 (temp <- temp + matA.[i,k] * matB.[k,j]) |> ignore                                                           
                                                                 (result.[i,j] <- temp) |> ignore)
 
+let GetExecTime(f : (unit -> unit)) =
+        let stopwatch = System.Diagnostics.Stopwatch.StartNew()
+        f()
+        stopwatch.Stop()
+        stopwatch.Elapsed
+
 let colCount = 180 * 2
 let rowCount = 2000 * 2
 let colCount2 = 270 * 2
 let m1 = InitializeMatrix(rowCount, colCount)
 let m2 = InitializeMatrix(colCount, colCount2)
+
 let mutable result1 = Array2D.zeroCreate<double> rowCount colCount2
+let seqTime = GetExecTime (fun () -> MultiplyMatricesSequential(m1, m2, result1))
 
-// First do the sequential version.
-printfn "Executing sequential loop..."
-let stopwatch = new Stopwatch()
-stopwatch.Start();
-
-MultiplyMatricesSequential(m1, m2, result1)
-stopwatch.Stop();
-let time1 = stopwatch.ElapsedMilliseconds
-stopwatch.Reset()
-
-// Do the parallel loop.
-printfn "Executing parallel loop..."
-stopwatch.Start()
 let mutable result2 = Array2D.zeroCreate<double> rowCount colCount2
-MultiplyMatricesParallel(m1, m2, result2)
-stopwatch.Stop()
-let time2 = stopwatch.ElapsedMilliseconds
+let parTime = GetExecTime (fun () -> let r = MultiplyMatricesParallel(m1, m2, result2)
+                                     printfn "Completed %s" (r.IsCompleted.ToString()))
 
-printfn "Sequential loop time in milliseconds: %d" time1
-printfn "Parallel loop time in milliseconds: %d" time2
+[("Using Parallel.For", parTime.TotalMilliseconds);
+ ("Non Parallel", seqTime.TotalMilliseconds);]
+|> Chart.Bar

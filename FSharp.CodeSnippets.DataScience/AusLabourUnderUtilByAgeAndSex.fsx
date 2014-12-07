@@ -51,4 +51,8 @@ let chart2 =
     |> Chart.WithLabels ["15 - 24"; "25 - 34"; "35 - 44"; "45 - 54"; "Over 55"]
     |> Chart.Show
 
-
+let chart3 =
+    [rate15_24;rate25_34;rate35_44;rate45_54;rate55_Over]
+    |> Chart.Line
+    |> Chart.WithOptions options2
+    |> Chart.WithLabels ["15 - 24"; "25 - 34"; "35 - 44"; "45 - 54"; "Over 55"]

@@ -125,6 +125,5 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataSci
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
-C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.fsprojResolveAssemblyReference.cache
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.pdb
