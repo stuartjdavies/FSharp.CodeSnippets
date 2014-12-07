@@ -107,6 +107,7 @@
     <None Include="MatrixMulti.fsx" />
     <None Include="DirectorySearch.fsx" />
     <None Include="AusBankStockPrices.fsx" />
+    <None Include="PSeqReduce.fsx" />
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
