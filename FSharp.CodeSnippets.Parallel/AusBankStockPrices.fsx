@@ -38,8 +38,6 @@ let pseqTime = GetExecTime (fun () -> stocks |> PSeq.map (fun (name,url) -> (nam
                                                                               (name, [ for row in stock.Rows -> row.Date, row.Open]))
                                              |> Seq.iter(fun (name, _) -> printfn "PSeq Downlaoded %s" name))
 
-
-printfn "-------------------------------------------------\r"
 [("PSeq", pseqTime.TotalMilliseconds);
  ("Seq", seqTime.TotalMilliseconds);
  ("Async", asyncTime.TotalMilliseconds)]
