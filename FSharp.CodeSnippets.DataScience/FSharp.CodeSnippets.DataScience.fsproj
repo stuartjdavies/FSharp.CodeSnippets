@@ -50,6 +50,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <None Include="WorldPoplutationGrowth.fsx" />
+    <None Include="Training.fsx" />
     <None Include="UnemploymentTrends.fsx" />
     <None Include="Deficit.fsx" />
     <None Include="Debt.fsx" />
