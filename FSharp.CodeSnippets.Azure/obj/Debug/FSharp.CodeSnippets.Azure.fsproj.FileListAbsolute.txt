@@ -148,3 +148,7 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.Azu
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.Azure\bin\Debug\zh-Hant\System.Spatial.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.Azure\obj\Debug\FSharp.CodeSnippets.Azure.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.Azure\obj\Debug\FSharp.CodeSnippets.Azure.pdb
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Azure\bin\Debug\FSharp.Data.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Azure\bin\Debug\FSharp.Data.TypeProviders.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Azure\bin\Debug\FSharp.Data.pdb
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.Azure\bin\Debug\FSharp.Data.xml

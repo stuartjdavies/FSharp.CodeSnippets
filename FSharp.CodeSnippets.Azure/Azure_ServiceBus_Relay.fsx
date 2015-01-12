@@ -17,8 +17,6 @@ let namespaceManager = NamespaceManager.CreateFromConnectionString(connectionStr
 let key=""
 let ns=""
 
-namespaceManager.
-
 [<ServiceContract(Namespace = "urn:ps")>]
 type IProblemSolver = 
         [<OperationContract>]

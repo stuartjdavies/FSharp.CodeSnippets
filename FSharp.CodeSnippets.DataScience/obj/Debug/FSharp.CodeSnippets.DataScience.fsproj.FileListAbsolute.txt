@@ -1,4 +1,3 @@
-C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Excel.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.DataScience.dll.config
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.DataScience.XML
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.DataScience.dll
@@ -47,8 +46,6 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.Dat
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.DataScience\bin\Debug\RProvider.Server.pdb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\src\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.pdb
-C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.dll
-C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.pdb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.DataScience.dll.config
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.DataScience.XML
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.DataScience.dll
@@ -56,9 +53,11 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataSci
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\ApiaryProvider.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Deedle.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Deedle.RProvider.Plugin.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Excel.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\ExcelProvider.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\Foogle.Charts.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.Charting.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.Core.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.Data.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FunScript.Data.dll
@@ -83,6 +82,7 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataSci
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\RProvider.Server.exe
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\XPlot.GoogleCharts.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.pdb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\FSharp.CodeSnippets.TypeProviders.xml
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\ApiaryProvider.pdb
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\ApiaryProvider.xml
@@ -125,5 +125,6 @@ C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataSci
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.fsprojResolveAssemblyReference.cache
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.dll
 C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\obj\Debug\FSharp.CodeSnippets.DataScience.pdb
