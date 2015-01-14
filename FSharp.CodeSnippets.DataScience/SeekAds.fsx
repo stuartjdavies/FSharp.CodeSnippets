@@ -1,5 +1,6 @@
 ﻿#load "../packages/FsLab.0.0.19/FsLab.fsx"
 #r @"FSharp.Data.TypeProviders.dll" 
+#load "../packages/XPlot.GoogleCharts.1.0.1/XPlot.GoogleCharts.fsx"
  
 open System
 open System.IO
@@ -7,32 +8,26 @@ open System.Linq
 open System.Collections.Generic
 open System.Net
 open FSharp.Data
-open FSharp.Charting
+open XPlot.GoogleCharts
                                              
 type seekAddsPage = JsonProvider<"""C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\FSharp.CodeSnippets.DataScience\data\SeekSearch.json""">
 
-let BuildSeekUrl keywords (page : int)= 
+let buildSeekUrl keywords (page : int)= 
         //Azure+AWS        
         """https://api.seek.com.au/v2/jobs/search?&callback=jQuery18209120329900179058_1421128856139&keywords=""" + keywords + """&hirerId=&hirerGroup=&page=""" + page.ToString() + """&classification=&subclassification=&graduateSearch=false&displaySuburb=&suburb=&location=&nation=3000&area=&isAreaUnspecified=false&worktype=&salaryRange=0-999999&salaryType=annual&dateRange=999&sortMode=KeywordRelevance&engineConfig=&usersessionid=akwv3vskkkuyif4zhzz0w3m2&userid=&userqueryid=26411845208856486&include=expanded&_=1421128856489"""
 
-
-let GetSeekPageAddJson (url : string) =
+let getSeekPageAddJson (url : string) =
         let wc = new WebClient()
         let response = wc.DownloadString(url) 
         let json = response.Remove(response.Length - 1).Remove(0, response.IndexOf("(") + 1)
         seekAddsPage.Parse(json)
 
-let GetSeekPageJson keywords page = BuildSeekUrl keywords page |> GetSeekPageAddJson 
+let getSeekAdJson keywords page = buildSeekUrl keywords page |> getSeekPageAddJson 
 
-//let keywords = "F%23"
-// "Azure+C#"
-
-let GetSystemNumberOfSeekAdds(keywords) = (GetSeekPageJson keywords 1).TotalCount
-
-let GetAllSeekAdds keywords  = 
+let getSeekAds keywords  = 
        let rec aux(keywords, page) =
                 seq {
-                     let json = (GetSeekPageJson keywords page)                  
+                     let json = (getSeekAdJson keywords page)                  
                      let rows = json.Data
                      let numberOfRows = json.Data.Length
 
@@ -45,40 +40,41 @@ let GetAllSeekAdds keywords  =
                 }                                                             
        aux(keywords, 1) 
 
-let BarGraphSeekSearchCount (xs : string seq) = xs |> Seq.map(fun x-> (x.Replace("F%23", "F#"), GetSystemNumberOfSeekAdds(x)))
-                                                   |> Chart.Bar            
+let getJobCount (xs : string seq) = xs |> Seq.map(fun x-> let totalAdCount = getSeekAdJson x 1 |> (fun x -> x.TotalCount)
+                                                          (x.Replace("F%23", "F#"), totalAdCount))                                                               
 
-let BarGraphSeekSearchCountByLocation (keywords : string) = GetAllSeekAdds keywords                                                          
-                                                            |> Seq.groupBy(fun x -> x.Location)
+let getJobCountByLocation(xs : seekAddsPage.Datum seq) = xs |> Seq.groupBy(fun x -> x.Location) 
                                                             |> Seq.map(fun (x, ys) -> (x, ys |> Seq.length))
-                                                            |> Chart.Bar            
+                                                       
+
+["Haskell";"F%23";"Scala";"Lisp";"Erlang";"Clojure";"Erlang"] |> getJobCount |> Chart.Bar |> Chart.WithTitle "Seek jobs mentioning functional programing on seek" |> Chart.Show
+["Haskell";"F%23";"Scala";"Lisp";"Erlang";"Clojure";"Erlang"] |> getJobCount |> Seq.sumBy(fun (_,x) -> x)
+
+["Azure";"AWS"] |> getJobCount |> Chart.Bar |> Chart.Show
+["Azure";"AWS"] |> getJobCount |> Chart.Pie |> Chart.WithTitle "Azure vs AWS on Seek" |> Chart.Show
+
+["Big Data";"R";"Hadoop"; "Spark"; "Pig"; "Hive"; "Python"; "Tableau"; "Machine Learning"] |> getJobCount |> Chart.Bar |> Chart.Show
+["C#"; "Javascript"; "Java"; "Scala"; "VB.NET"; "Fortran"; "Cobol"; "F%23"; "Haskell"] |> getJobCount |> Chart.Bar |> Chart.Show
+["Prince"; "Agile"] |> getJobCount |> Chart.Bar |> Chart.Show
+["Postgres"; "Sql Server"; "Oracle"; "MongoDB"; "CouchDB"; "Cassandra"; "NoSQL"] |> getJobCount |> Chart.Bar |> Chart.Show
+["Spanish"; "Italian"; "French"; "Japanese"; "Chinese"; "Arabic"; "Russian"] |> getJobCount |> Chart.Bar |> Chart.Show
+["BizTalk"] |> getJobCount
+
+"Italian" |> getSeekAds  |> getJobCountByLocation |> Chart.Bar |> Chart.Show
+
+"Italian" |> getSeekAds |> Seq.filter (fun x -> x.Title.Contains("Sales")) 
+                        |> Seq.filter (fun x -> x.Location.Contains("Melbourne"))                         
+                        |> Seq.iter(fun x -> printfn "%d\r %s\r %s" x.Id x.Title x.Teaser) 
 
 
-["Haskell";"F%23";"Scala";"Lisp";"Erlang";"Clojure"] |> BarGraphSeekSearchCount
-["Azure";"AWS"] |> BarGraphSeekSearchCount
-["Big Data";"R";"Hadoop"; "Spark"; "Pig"; "Hive"; "Python"; "Tableau"; "Machine Learning"] |> BarGraphSeekSearchCount
-["C#"; "Javascript"; "Java"; "Scala"; "VB.NET"; "Fortran"; "Cobol"; "F%23"; "Haskell"] |> BarGraphSeekSearchCount
-["Prince"; "Agile"] |> BarGraphSeekSearchCount
-["Sql Server"; "Oracle"; "MongoDB"; "CouchDB"; "Cassandra"; "NoSQL"] |> BarGraphSeekSearchCount
-["Spanish"; "Italian"; "French"; "Japanese"; "Chinese"; "Arabic"; "Russian"] |> BarGraphSeekSearchCount
 
-"AWS" |> BarGraphSeekSearchCountByLocation
-"Azure" |> BarGraphSeekSearchCountByLocation
-"Scala" |> BarGraphSeekSearchCountByLocation
-"Clojure" |> BarGraphSeekSearchCountByLocation
-"BizTalk" |> BarGraphSeekSearchCountByLocation
-"BizTalk" |> GetSystemNumberOfSeekAdds
- 
-GetAllSeekAdds("Italian") |> Seq.groupBy(fun x -> x.Location)
-                          |> Seq.map(fun (x, ys) -> (x, ys |> Seq.length))
-                          |> Seq.sortBy(fun (_, l) -> -l)
-                          |> Seq.iter(fun (x,y) -> printfn "%s %d" x y)
-
-GetAllSeekAdds("Spanish") |> Seq.groupBy(fun x -> x.Location)
-                          |> Seq.map(fun (x, ys) -> (x, ys |> Seq.length))
-                          |> Seq.sortBy(fun (_, l) -> -l)
-                          |> Seq.iter(fun (x,y) -> printfn "%s %d" x y)
-
-
-let adds = GetAllSeekAdds "C#" |> Seq.take 100;;
+"AWS" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show
+"AWS" |> getSeekAds |> getJobCountByLocation |> Chart.Pie |> Chart.Show
+"Azure" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show
+"Scala" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show
+"Clojure" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show
+"BizTalk" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show
+"Italian" |> getSeekAds  |> getJobCountByLocation |> Seq.sortBy(fun (_, l) -> -l) |> Seq.iter(fun (x,y) -> printfn "%s %d" x y) 
+"Spanish" |> getSeekAds |> getJobCountByLocation |> Seq.sortBy(fun (_, l) -> -l) |> Seq.iter(fun (x,y) -> printfn "%s %d" x y)
+"C#" |> getSeekAds |> Seq.take 300 |> getJobCountByLocation |> Chart.Bar |> Chart.Show
  
