@@ -1,6 +1,8 @@
 ﻿#load "../packages/FsLab.0.0.19/FsLab.fsx"
 #r @"FSharp.Data.TypeProviders.dll" 
 #load "../packages/XPlot.GoogleCharts.1.0.1/XPlot.GoogleCharts.fsx"
+
+
  
 open System
 open System.IO
@@ -69,6 +71,8 @@ let getJobCountByLocation(xs : seekAddsPage.Datum seq) = xs |> Seq.groupBy(fun x
 
 
 "AWS" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show
+"AWS" |> getSeekAds |> getJobCountByLocation |> Chart.Pie |> Chart.Show
+
 "AWS" |> getSeekAds |> getJobCountByLocation |> Chart.Pie |> Chart.Show
 "Azure" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show
 "Scala" |> getSeekAds |> getJobCountByLocation |> Chart.Bar |> Chart.Show

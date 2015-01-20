@@ -77,16 +77,13 @@
     <None Include="EventLogWithPS.fsx" />
     <None Include="AustralianMeatProduced.fsx" />
     <None Include="AusLabourForceStatusBySexTrend.fsx" />
+    <None Include="AEMO.fsx" />
     <None Include="AusLabourUnderUtilByAgeAndSex.fsx" />
     <None Include="packages.config" />
     <None Include="app.config" />
     <Content Include="Google.DataTable.Net.Wrapper.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ApiaryProvider">
-      <HintPath>..\packages\ApiaryProvider.1.0.2\lib\net40\ApiaryProvider.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Deedle">
       <HintPath>..\packages\Deedle.1.0.1\lib\net40\Deedle.dll</HintPath>
       <Private>True</Private>
@@ -119,32 +116,12 @@
       <HintPath>..\packages\FSharp.Data.2.0.9\lib\net40\FSharp.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FunScript">
-      <HintPath>..\packages\FunScript.1.1.84\lib\net40\FunScript.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FunScript.Data">
-      <HintPath>..\packages\FunScript.Data.1.1.84\lib\net40\FunScript.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FunScript.Interop">
-      <HintPath>..\packages\FunScript.1.1.84\lib\net40\FunScript.Interop.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FunScript.TypeScript.Binding.highcharts">
-      <HintPath>..\packages\FunScript.TypeScript.Binding.highcharts.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.highcharts.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FunScript.TypeScript.Binding.jquery">
-      <HintPath>..\packages\FunScript.TypeScript.Binding.jquery.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.jquery.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FunScript.TypeScript.Binding.lib">
-      <HintPath>..\packages\FunScript.TypeScript.Binding.lib.1.1.0.37\lib\net40\FunScript.TypeScript.Binding.lib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Google.DataTable.Net.Wrapper">
       <HintPath>..\packages\Google.DataTable.Net.Wrapper.3.1.0.0\lib\Google.DataTable.Net.Wrapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">

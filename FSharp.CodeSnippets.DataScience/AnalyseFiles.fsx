@@ -1,55 +1,69 @@
 ﻿#load "../packages/FsLab.0.0.19/FsLab.fsx"
+#r @"FSharp.Data.TypeProviders.dll" 
+#load "../packages/XPlot.GoogleCharts.1.0.1/XPlot.GoogleCharts.fsx"
 
 open System.IO
 open System.Drawing
 open System.Windows.Forms
 open System.Linq
+open System
+open XPlot.GoogleCharts
 
-let startPath="""C:\Users\stuart\Documents\GitHub\"""
+let startPath= """C:\Users\stuart\Documents\GitHub\FSharp.CodeSnippets\"""
 
-let rec GetDirectories(path) =
+let rec getDirectories path =
          seq {                
-                let ds = Directory.GetDirectories(path) 
-                
-                let subDs = ds |> Seq.map(fun d -> GetDirectories(d)) 
-                               |> Seq.concat
-                                                                   
-                yield! Seq.append ds subDs
-         }               
+                yield path
+                for subDir in Directory.GetDirectories(path) do 
+                    yield! getDirectories(subDir)                                                                                              
+         }  
+
+         
+let getFiles paths  = 
+        seq {
+            for path in paths do 
+                yield! Directory.GetFiles path 
+        }        
+                 
+let filterOutStrings stringsToFilter  (xs : string seq) = xs |> Seq.filter(fun d -> (stringsToFilter |> Seq.exists(fun s -> d.Contains(s) ) = false))            
                           
-let filterOut = [|"\\packages"; "\\lib"; "\\bin"; "\\obj"; "\.git"; "\.nuget";
-                  "\\Properties";"\\data";"\\Microsoft.WindowsAzure.Caching"|]
+let toFileInfo files = files |> Seq.map(fun f -> FileInfo(f)) 
 
-let files = GetDirectories(startPath)  |> Seq.filter(fun d -> (filterOut |> Seq.exists(fun s -> d.Contains(s) ) = false))
-                                       |> Seq.map(fun d -> Directory.GetFiles(d))
-                                       |> Seq.concat
-                                       |> Seq.filter(fun f -> f.Contains(".fsx"))                  
-                                       |> Seq.map(fun f -> FileInfo(f))                                    
-                                                                                          
-let form = new Form(Visible = true, Text =  "Files",
-                    TopMost = true, Size = Size(1200,800))
+let files = getDirectories startPath 
+            |> filterOutStrings ["\\packages"; "\\lib"; "\\bin"; "\\obj"; "\.git"; "\.nuget"; "\\Properties";"\\data";"\\Microsoft.WindowsAzure.Caching"] 
+            |> getFiles 
+            |> Seq.filter (fun file -> file.Contains(".fsx"))
 
-open FSharp
-open FSharp.Charting
+let countDatesPerDay (xs : System.DateTime seq) = xs |> Seq.groupBy(fun x -> DateTime(x.Year, x.Month, x.Day)) 
+                                                     |> Seq.map(fun (g, dts) -> (g, (dts|> Seq.length)))
 
-Chart.Bar([("A",1);("B",2);("C",3)]) 
- 
-let data = new DataGridView(Dock = DockStyle.Fill,Font = new Font("Lucida Console",12.0f),ForeColor = Color.DarkBlue)
+let countDatesPerMonth (xs : System.DateTime seq) = xs |> Seq.groupBy(fun x -> DateTime(x.Year, x.Month, 1)) 
+                                                       |> Seq.map(fun (g, dts) -> (g, (dts |> Seq.length)))
+                                                                                                              
+let sortDatesAsc (xs : System.DateTime seq) = xs |> Seq.sortBy(fun x -> x.ToFileTimeUtc())
+let sortDatesDesc (xs : System.DateTime seq) = xs |> Seq.sortBy(fun x -> -x.ToFileTimeUtc())
 
-form.Controls.Add(data)
-data.DataSource <-  query {
-                        for f in files do
-                        sortByDescending f.LastAccessTime
-                        select(f.Name, f.LastAccessTime, f.Directory)
-                    } |> Seq.toArray
+printfn "Number of FSharp scripts = %d" (files |> Seq.length)
+//printfn "Lines of FSharp code = %d" (files )
 
-data.Columns.[0].HeaderText <- "Name"
-data.Columns.[1].HeaderText <- "Last Accessed"
-data.Columns.[2].HeaderText <- "Directory"
+files |> toFileInfo 
+      |> Seq.map(fun fi -> fi.LastWriteTime) 
+      |> sortDatesAsc 
+      |> countDatesPerDay
+      |> Seq.skip 1   
+      |> Chart.Bar
+      |> Chart.Show                             
 
-data.Columns.[0].Width <- 400
-data.Columns.[1].Width <- 200
-data.Columns.[2].Width <- 1000
-
-
-                                            
+files |> toFileInfo 
+      |> Seq.map(fun fi -> fi.CreationTime) 
+      |> sortDatesAsc 
+      |> countDatesPerDay   
+      |> Chart.Bar
+      |> Chart.Show 
+      
+files |> toFileInfo 
+      |> Seq.map(fun fi -> fi.CreationTime) 
+      |> sortDatesDesc 
+      |> countDatesPerMonth  
+      |> Chart.Bar
+      |> Chart.Show                                                    
