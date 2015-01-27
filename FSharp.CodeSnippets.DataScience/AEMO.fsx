@@ -48,23 +48,30 @@ let getMonths (yearUrls : (int * string) seq) =
 // let getPriceAndDemands (urls : string seq) = urls |> Seq.map(fun url -> use wc = new WebClient()
 //                                                                        let csv = wc.DownloadString(url).Trim() 
 //                                                                        PriceAndDemandSchema.Parse(csv).Rows)
-                                                                                                                           
+let downloadFileAsString (url : string) = let wc = new WebClient()
+                                          wc.DownloadString(url).Trim()
+                                          
+let getPricesAndDemandsFromString (s : string) = s.Split '\r' |> Seq.map(fun ln -> let fields = ln.Split(',')
+                                                                                   (fields.[0], fields.[1], fields.[2], fields.[3], fields.[4]))
+                                                                                                                          
                                                                                    
-let getPriceAndDemands (url : string) = let wc = new WebClient()
-                                        let s = wc.DownloadString(url).Trim()
-                                        s.Split '\r' |> Seq.map(fun ln -> let fields = ln.Split(',')
-                                                                          (fields.[0], fields.[1], fields.[2], fields.[3], fields.[4]))
-
+let getPriceAndDemandsFromUrls (urls : string seq) = seq {
+                                                       for url in urls do
+                                                         let s = downloadFileAsString url 
+                                                         yield! getPricesAndDemandsFromString s
+                                                     }               
+                                        
 let sortMonthsDesc months = months |> Seq.sortBy (fun (y, m, _, _) -> -((y * 10) + m))
 let sortMonthsAsc months = months |> Seq.sortBy (fun (y, m, _, _) -> ((y * 10) + m))
 let filterByState state months = months |> Seq.filter (fun (_, _, s, _) -> s = state )
 
-getYears() |> getMonths |> Seq.length
+getYears() |> getMonths |> Seq.length 
+
 
 #time
-getYears() |> getMonths |> sortMonthsDesc |> filterByState "NSW" |> Seq.take 24 
-           |> Seq.map(fun (_, _, _, url) -> getPriceAndDemands(url)) 
-           |> Seq.concat                      
+getYears() |> getMonths |> sortMonthsDesc |> filterByState "NSW" |> Seq.take 24            
+           |> Seq.map(fun (_, _, _, url) -> url) 
+           |> getPriceAndDemandsFromUrls                     
            |> Seq.map(fun (_, dt, demand, rrp, _) -> (dt, rrp))             
            |> Seq.toList |> List.rev
            |> Chart.Line    

@@ -52,8 +52,10 @@
     <None Include="UnitsOfMeasure.fsx" />
     <None Include="ActivePatternExample.fsx" />
     <None Include="WriteExcelFile.fsx" />
+    <None Include="TrainingPlan.fsx" />
     <None Include="OOConceptsWithMonopoly.fsx" />
     <None Include="CoreFPConcepts.fsx" />
+    <Compile Include="MyScratchPad.fs" />
     <None Include="CarProductionLine.fsx" />
     <None Include="DataStructures.fsx" />
     <None Include="ComputaionalExpressions.fsx" />
