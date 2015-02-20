@@ -55,7 +55,7 @@
     <None Include="TrainingPlan.fsx" />
     <None Include="OOConceptsWithMonopoly.fsx" />
     <None Include="CoreFPConcepts.fsx" />
-    <Compile Include="MyScratchPad.fs" />
+    <None Include="MyScratchPad.fsx" />
     <None Include="CarProductionLine.fsx" />
     <None Include="DataStructures.fsx" />
     <None Include="ComputaionalExpressions.fsx" />

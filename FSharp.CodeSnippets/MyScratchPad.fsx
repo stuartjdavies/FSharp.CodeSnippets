@@ -77,3 +77,17 @@ do
 
 let n = if (printfn "hi"; true) then 1 else 2
 
+() |> (fun () -> 20) |> (fun x -> x * 10) |> (fun x -> x * 10) 
+
+(float "10.0")
+
+(int (float "20.00"))
+
+
+//let StandardDev xs u = xs |> Seq.map(fun x -> (x - u) ** 2)
+//                          |> 
+//                          |> Seq.sum
+
+
+let inline Add a b = a + b
+
