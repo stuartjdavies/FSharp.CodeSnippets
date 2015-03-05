@@ -1,0 +1,63 @@
+﻿Amazon services to be exprienmented in order:
+============================================
+
+1. Dynamo DB 
+2. Amazon S3 
+3. Amazon AutoScaling
+4. Amazon EC2
+5. Amazon SQS 
+6. Amazon CloudWatch
+7. Amazon CloudFormation
+8. Amazon Elastic Beanstalk
+9. Amazon IdentityManagement
+10. Amazon Glacier	
+11. Amazon Simple Workflow Service (SWS)
+
+Amazon Serices
+==============
+	
+1. Amazon.AWSSupport	
+2. Amazon.AutoScaling	
+3. Amazon.CloudFormation	
+4. Amazon.CloudFront	
+5. Amazon.CloudHSM	Version 
+6. Amazon.CloudSearch	
+7. Amazon.CloudSearchDomain
+6. Amazon.CloudTrail	
+7. Amazon.CloudWatch	
+8. Amazon.CloudWatchLogs	
+9. Amazon.CodeDeploy	
+10. Amazon.CognitoIdentity	
+11. Amazon.CognitoSync	
+12. Amazon.ConfigService	
+13. Amazon.DataPipeline	
+14. Amazon.DirectConnect	
+15. Amazon.DynamoDBv2	
+16. Amazon.EC2	
+17. Amazon.ECS	
+18. Amazon.ElastiCache
+19. Amazon.ElasticBeanstalk
+20. Amazon.ElasticLoadBalancing
+21. Amazon.ElasticMapReduce	
+22. Amazon.ElasticTranscoder
+23. Amazon.Glacier	
+24. Amazon.IdentityManagement
+25. Amazon.ImportExport	
+26. Amazon.KeyManagementService	
+27. Amazon.Kinesis	
+28. Amazon.Lambda	
+29. Amazon.OpsWorks	
+30. Amazon.RDS	
+31. Amazon.Redshift	
+32. Amazon.Route53	
+33. Amazon.Route53Domains	
+34. Amazon.Runtime	
+35. Amazon.S3	
+36. Amazon.SQS	
+37. Amazon.SecurityToken	
+38. Amazon.SimpleDB	
+39. Amazon.SimpleEmail
+40. Amazon.SimpleNotificationService	
+41. Amazon.SimpleSystemsManagement	
+42. Amazon.SimpleWorkflow	
+43. Amazon.StorageGateway

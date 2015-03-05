@@ -1,4 +1,4 @@
-﻿#r "../packages/AWSSDK.2.3.5.0/lib/net45/AWSSDK.dll"
+﻿#r "../packages/AWSSDK.2.3.22.0/lib/net45/AWSSDK.dll"
 
 open System
 open System.Collections.Generic
@@ -28,6 +28,7 @@ productCatalogTable.PutItem(book1)
 
 let book2 = new Document()
 
+
 book2.["Id"] <- DynamoDBEntry.op_Implicit 102
 book2.["Title"] <- DynamoDBEntry.op_Implicit "Book 102 Title"
 book2.["ISBN"] <- DynamoDBEntry.op_Implicit "222-2222222222"
@@ -37,6 +38,9 @@ book2.["Dimensions"] <- DynamoDBEntry.op_Implicit "8.5 x 11.0 x 0.8"
 book2.["PageCount"] <- DynamoDBEntry.op_Implicit 600
 book2.["InPublication"] <- DynamoDBEntry.op_Implicit true
 book2.["ProductCategory"] <- DynamoDBEntry.op_Implicit "Book"
+
+book2.ToJson()
+
 productCatalogTable.PutItem(book2)
 
 let book3 = new Document()
