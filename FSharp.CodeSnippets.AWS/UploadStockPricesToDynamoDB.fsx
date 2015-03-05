@@ -50,15 +50,17 @@ msftRows
 // 
 // Run a query
 //
-let query = Between("OpenPrice", 45, 46) <&&> 
-            Between("ClosePrice", 45, 45.5) <&&>
-            GreaterThan("AdjClose", 44.8) 
+let query = { DynamoDbScan.From="MicrosoftStockPrices";
+                           Where=(Between("OpenPrice", 45, 46) <&&> 
+                                  Between("ClosePrice", 45, 45.5) <&&>
+                                  GreaterThan("AdjClose", 44.8)) }
             
-query |> runScan "MicrosoftStockPrices" dynamoDbClient
+query |> runScan dynamoDbClient
       |> Seq.iteri(fun i item -> printfn "%d. Date - %s, Open - %s, Close - %s, Adj. Close=%s"
                                                 i item.["ODate"].S item.["OpenPrice"].N 
                                                   item.["ClosePrice"].N item.["AdjClose"].N)
 
+    
 //
 // Print the Table Summary
 //

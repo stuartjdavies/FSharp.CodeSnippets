@@ -69,6 +69,7 @@ type DynamoDBTableSchema = {
         ProvisionedCapacity : DynamoDBProvisionedCapacity;                
 }
 
+
 type DymamoDBTableSchemaRequirementCheck = | ValidTableSchema | InvalidTableSchema of reason : string
 
 type DynamoDBTableSchemaRequirement = (DynamoDBTableSchema -> DymamoDBTableSchemaRequirementCheck)
@@ -79,6 +80,8 @@ type QExpr =
      | LessThan of c : ColumnName * val1 : obj     
      | And of e1 : QExpr * e2 : QExpr
      | Or of e1  : QExpr * e2 : QExpr    
+
+type DynamoDbScan = { From : String; Where : QExpr }
 
 let (<&&>) e1 e2 = And(e1,e2) 
 let (<||>) e1 e2 = Or(e1,e2)
@@ -159,12 +162,12 @@ let getFilterValues (q : QExpr) =
                                                   i2, vs1 @ vs2                                                                                                                             
           evalQExpr 0 q |> snd
 
-let runScan from (c : AmazonDynamoDBClient) q =
+let runScan (c : AmazonDynamoDBClient) q =
        let sr = new ScanRequest()                                                                                                        
-       sr.TableName <- from 
+       sr.TableName <- q.From 
        sr.Select <- Select.ALL_ATTRIBUTES
-       sr.ExpressionAttributeValues <- getFilterValues q |> seqToDic
-       sr.FilterExpression <- getFilterExpr q
+       sr.ExpressionAttributeValues <- getFilterValues q.Where |> seqToDic
+       sr.FilterExpression <- getFilterExpr q.Where
        c.Scan(sr).Items                      
 
 let toDocument (rds : (string * DynamoDBEntry) seq ) =
